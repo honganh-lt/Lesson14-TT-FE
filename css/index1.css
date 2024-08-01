@@ -1,0 +1,699 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 20px;
+    font-family:"Asap", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+header{
+    padding: 1.1rem;
+}
+#header-nav ul li a{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #000;
+    text-decoration: none;
+}
+#header-nav ul li{
+    margin-left: 2.6rem;
+    position: relative;
+}
+/*
+#header-nav ul li::before{
+    content: " ";
+    position: absolute;
+    top: 100%;
+    width: 70%;
+    height: 0.2rem;
+    background-color: #bd945f;
+}*/
+#header-nav ul li::after{
+    content: " ";
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    height: 4px;
+    width: 70%;
+    left: 40%;
+    transform: translate(-50%);
+    background-color: #bd945f;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+#header-nav ul li:hover::after{
+    width: 70%;
+    opacity: 1;
+}
+#header-nav .fa-solid{
+    visibility: hidden;
+}
+@media (min-width: 1400px){
+    .container .container-lg, .container-md
+    .container-sm, .container-x, .container-xxl{
+        max-width: 1280px;
+    }
+}
+@media (min-width: 767.98px) and (max-width: 999.98px){
+    #header-nav ul li{
+        margin-left: 0.5rem;
+    }
+}
+@media (max-width: 576px){
+    header{
+        position: relative;
+    }
+    #header-nav ul{
+        display: block !important;
+    }
+    #header-nav .fa-solid{
+       visibility: visible;
+    }
+      /* 
+    body{
+        position: relative;
+    }
+    #header-menu li{
+        width: 100%;
+    }*/
+    #header-menu{
+        /*
+        position: absolute;
+        top: 20%;
+        left: 50%;*/
+       display: none;
+    }
+    .header-logo{
+        height: 48px;
+    }
+}
+
+/*Banner*/
+.row{
+    max-width: 100%;
+    display: flex;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-top: var(--bs-gutter-y);
+}
+.col-3{
+    flex: 0 0 auto;
+    width: 25%;
+}
+.col-5{
+    flex: 0 0 auto;
+    width: 41.666667%;
+}
+.col-7{
+    flex: 0 0 auto;
+    width: 58.33333333%;
+}
+.col-6{
+    flex: 0 0 auto;
+    width: 50%;
+}
+.container-x{
+    margin: 0 2.5rem;
+}
+.cl-blue{
+    color: #2c2e53;
+}
+.cl-or{
+    color: #bd945f;
+}
+.w-100{
+    width: 100% !important;
+}
+.h-100{
+    height: 100% !important;
+}
+img{
+    vertical-align: middle;
+}
+
+#banner{
+    background-image: url("/Lesson12-13-14/img/banner.jpg");
+    height: 41rem;
+}
+
+#banner h3 span{
+    font-family:"Asap", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+}
+#banner p{
+    font-size: 0.8rem;
+    width: 27.7rem;
+    text-align: justify;
+    margin: 1.4rem 0 1.2rem;
+}
+#banner button{
+    padding: 1rem 1.5rem;
+    background-color: #bd945f;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+}
+#banner .container{
+    position: relative;
+}
+#banner .box-banner{
+    position: absolute;
+    top: 5.5rem;
+    left: 3rem;
+}
+/*Banner*/
+
+
+
+/*************Category************************************/
+#category{
+    background-color: #f3f3f3;
+    height: 23rem;
+
+}
+#category  .list-category{
+    background-color: #fff;
+}
+#category .box-category .img-category {
+    display: flex;
+    justify-content: center;
+}
+
+.box-category h3{
+    text-align: center;
+    font-size: 0.8rem;
+    color: #2c2e53;
+    font-family:"Asap", sans-serif;
+    font-weight: 800;
+    margin: 1rem 0 5rem 0;
+}
+#category .container{
+    position: relative;
+}
+#category .list-category{
+    position: absolute;
+    top: -3rem;
+}
+
+/*************End Category************************************/
+
+/*************begin Product************************************/
+#product{
+    background-color: #f3f3f3;
+    height: 35rem;
+    padding: 5rem 0 3rem;
+}
+#product h2{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #2c2e53;
+    text-transform: uppercase;
+    font-family:"Asap", sans-serif;
+    font-weight: 900;
+    position: relative;
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+    margin-top: 4rem;
+}
+#product h2::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 44%;
+    transform: translateY(-44%);
+    width: 8rem;
+    height: 0.5rem;
+    background-color: #bd945f;
+}
+
+.product-title{
+    font-size: 0.75rem;
+    font-family:"Asap", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0.6rem auto 0.3rem; 
+    text-align: center;
+    color: #2c2e53;
+}
+.product-size{
+    font-size: 0.5rem;
+    margin: 0.3rem auto ;
+    text-align: center;
+}
+.product-price{
+    font-size: 0.5rem;
+    margin: 0.3rem auto ;
+    text-align: center;
+}
+.icon-star{
+    display: flex;
+    justify-content: center;
+}
+.icon-star span, .icon-star .fa-star{
+    font-size: 0.75rem;
+    color: #f6f606;
+}
+#list-product{
+    position: relative;
+}
+#list-product .slick-arrow{
+    position: absolute;
+    top: 40%;
+    width: 2rem;
+    height: 2rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#list-product .slick-next{
+    right: calc(-2rem);
+    background-color: #bd945f;
+}
+#list-product .slick-prev{
+    left: calc(-2rem);
+    z-index: 2;
+    background-color: #bd945f;
+}
+.box-product>div{
+    width: 80% !important;
+    margin: auto;
+}
+.container #list-product{
+    margin: auto;
+}
+
+
+
+/***********About us*********************/
+
+#about-us{
+    background-image: url(/Lesson12-13-14/img/bg-about-us.jpg);
+    height: 54rem;
+    position: relative;
+
+}
+#about-us{
+    background-color: #f3f3f3;
+    padding-top: 5rem;
+}
+#about-us::after{
+    content: " ";
+    position: absolute;
+    background-color: #141414;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 54rem;
+    opacity: 0.7;
+}
+#about-us .about-us-top, #about-us .about-us-bottom{
+    position: relative;
+    z-index: 1;
+}
+#about-us h2{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family:"Asap", sans-serif;
+    font-weight: 900;
+    position: relative;
+    margin-bottom: 2.6rem;
+}
+#about-us h2::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8rem;
+    height: 0.5rem;
+    background-color: #bd945f;
+}
+
+#about-us .about-us-top h2,#about-us .about-us-bottom h2{
+    padding-top: 3.5rem;
+}
+#about-us .about-us-top h3, #about-us .about-us-top h3 span {
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+#about-us .about-us-top h3 span{
+    font-size: 1.65rem;
+    color: #fff;
+    text-align: justify;
+    font-weight: 800;
+}
+#about-us .about-us-top h3 span, #about-us .about-us-top p span{
+    font-family:"Asap", sans-serif;
+}
+#about-us .about-us-top p,#about-us .about-us-top p span{
+    font-size: 0.65rem;
+    color: #fff;
+    text-align: justify;
+}
+#about-us .list-img-about-us{
+    display: flex;
+    justify-content: space-between;
+}
+#about-us .list-img-about-us .img-about-us{
+    position: relative;
+}
+#about-us .img-about-us a{
+    position: absolute;
+    color: #fff;
+    font-size: 0.8rem;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#about-us .about-us-bottom .box-about-us{
+    display: flex;
+    background-color: #fff;
+    margin-top: 1.4rem;
+    padding-top: 0.6rem;
+}
+#about-us .about-us-bottom .logo-about-us{
+    margin: 0 1.5rem;
+}
+#about-us .about-us-bottom h4{
+    font-family:"Asap", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #bd945f;
+    padding: 0;
+    margin: 0;
+}
+#about-us .about-us-bottom p{
+    font-size: 0.7rem;
+}
+
+
+/*Begin News*/
+#news{
+    padding: 5rem 0 3rem;
+}
+#news h3{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #2c2e53;
+    text-transform: uppercase;
+    font-family:"Asap", sans-serif;
+    font-weight: 900;
+    position: relative;
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+    margin-top: 4rem;
+}
+#news h3::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 44%;
+    transform: translateY(-50%);
+    width: 7rem;
+    height: 0.5rem;
+    background-color: #bd945f;
+}
+#news .box-news{
+    display: flex;
+    justify-content: space-between;
+}
+#news .news-left{
+    width: 32.5rem;
+    position: relative;
+}
+#news .news-right{
+    width: 24rem;
+}
+#news .content-news{
+    background-color: #bd945f;
+    padding: 1rem 1rem 1rem 2rem;
+    position: absolute;
+   /* bottom: calc(940px - 76px);*/
+   bottom: -3%;
+}
+#news .content-news h4{
+    font-family:"Asap", sans-serif;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+#news .content-news p{
+    font-family:"Asap", sans-serif;
+    font-size: 0.7rem;
+    color: #000;
+    text-align: justify;
+}
+#news .news-right .img-news img{
+    max-width: 172px;
+    max-height: 140px;
+    object-fit: cover;
+}
+#news .news-right h4{
+    color: #bd945f;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+#news .news-right p{
+    font-family:"Asap", sans-serif;
+    font-size: 0.5rem;
+    color: #000;
+    text-align: justify;
+}
+#news .item-news{
+    margin-bottom: 1rem;
+}
+#news .news-right a{
+    color: #bd945f;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/*End News*/
+/*Đối tác*/
+#doi-tac{
+    padding: 5rem 0 0 0;
+    padding-bottom: 6rem;
+}
+#doi-tac h2{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #2c2e53;
+    text-transform: uppercase;
+    font-family:"Asap", sans-serif;
+    font-weight: 900;
+    position: relative;
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+}
+#doi-tac h2::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 44%;
+    transform: translateY(-44%);
+    width: 7.5rem;
+    height: 0.5rem;
+    background-color: #bd945f;
+}
+
+/*Begin Trải Nghiệm*/
+#trai-nghiem{
+    background-image: url(/Lesson12-13-14/img/lienhe-bg.jpg);
+    height: 15rem;
+    position: relative;
+}
+#trai-nghiem .box-lien-he{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+}
+#trai-nghiem .lien-he-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 16rem;
+    
+}
+#trai-nghiem .lien-he-left>div{
+    color: #fff;
+    font-family:"Asap", sans-serif;
+    font-size: 1rem;
+}
+#trai-nghiem .lien-he-left .lien-he-bottom{
+    font-family:"Asap", sans-serif;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.1rem;
+}
+#trai-nghiem .lien-he-left .lien-he-bottom::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    height: 0.5rem;
+    width: 7rem;
+    background-color: #fff;
+    z-index: 3;
+}
+#trai-nghiem .lien-he-right{
+    width: 60%;
+    display: flex;
+    /*justify-content: space-between;*/
+}
+#trai-nghiem .form-label{
+    color: #fff;
+    font-size: 1rem;
+    font-family:"Asap", sans-serif;
+}
+#trai-nghiem .lien-he-right .input-lien-he{
+    max-width: 20.5rem;
+}
+#trai-nghiem input{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 0;
+}
+#trai-nghiem .lien-he-right .btn-lien-he{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+#trai-nghiem button{
+    padding: 0.9rem 2rem;
+    background-color: #fff;
+    border: 0;
+    font-size: 0.8rem;
+    margin-left: 2rem;
+}
+#trai-nghiem .img-ghe{
+    position: relative;
+    left: -5rem;
+    top: -13rem;
+}
+
+/*End Trải Nghiệm*/
+
+/*Footer*/
+#footer{
+    background-color: #2a2a2d;
+}
+#footer .box-footer{
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+#footer .footer-left{
+    width: 40%;
+}
+#footer .footer-left-top h2{
+    color: #fff;
+    font-size: 0.7rem;
+    position: relative;
+    text-transform: uppercase;
+}
+#footer .footer-left-top h2::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    height: 0.2rem;
+    width: 4rem;
+    background-color: #fff;
+    z-index: 3;
+}
+#footer .footer-left h5{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+#footer .footer-left-menu-icon li{
+    list-style: none;
+}
+#footer .footer-left-menu-icon li a{
+    text-decoration: none;
+    color: #fff;
+}
+#footer .footer-left-menu-icon li a i{
+    padding-right: 1rem;
+    font-size: 0.9rem;
+}
+#footer .footer-left-menu-icon li a span{
+    font-size: 0.8rem;
+}
+
+#footer .footer-mid{
+    width: 40%;
+    margin-left: 10rem;
+}
+#footer .footer-mid-top h2{
+    color: #fff;
+    font-size: 0.7rem;
+    position: relative;
+    text-transform: uppercase;
+}
+#footer .footer-mid-top h2::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    height: 0.2rem;
+    width: 4rem;
+    background-color: #fff;
+    z-index: 3;
+}
+#footer .footer-mid .footer-mid-menu li a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+#footer .footer-right{
+    width: 40%;
+}
+#footer .footer-right-top h2{
+    color: #fff;
+    font-size: 0.7rem;
+    position: relative;
+    text-transform: uppercase;
+}
+#footer .footer-right-top h2::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    height: 0.2rem;
+    width: 4rem;
+    background-color: #fff;
+    z-index: 3;
+}
+#footer .footer-right-icon{
+    padding-top: 0.8rem;
+}
+#footer .footer-right-icon a img{
+    padding-right: 0.4rem;
+}
+#footer .footer-right-end{
+    padding-top: 2rem;
+}
